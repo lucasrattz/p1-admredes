@@ -141,7 +141,7 @@ systemctl restart squid
 cat > /root/Cnx2.sh << EOF
 #!/bin/bash
 sed -i "s/home.lan/samdom.minhaempresa.com/" /etc/dhcp/dhcpd.conf
-sed -i "s/192.168.33.1;/192.168.33.10\noption netbios-name-servers 192.168.33.10;/" /etc/dhcp/dhcpd.conf
+sed -i "s/option domain-name-servers 192.168.33.1;/option domain-name-servers 192.168.33.10\noption netbios-name-servers 192.168.33.10;/" /etc/dhcp/dhcpd.conf
 
 echo -e "SERVIDOR DE CONEXÃO 100% CONFIGURADO. EXECUTE A ÚLTIMA PARTE DO SCRIPT NO SERVIDOR DE AUTENTICAÇÃO."
 EOF
